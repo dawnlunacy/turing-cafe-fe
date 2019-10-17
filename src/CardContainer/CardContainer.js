@@ -1,8 +1,8 @@
 import React from 'react';
-
+import Card from '../Card/Card';
 const CardContainer = (props) => {
     return (
-        <p> Testin our communication </p>
+        <Card />
     )
 }
 
