@@ -5,6 +5,8 @@
     border: 5px solid #006767;
     border-radius: 10px;
     color: #006767;
+    display: inline-block;
+    margin: 10px;
 }
 
 .cancel-btn {
