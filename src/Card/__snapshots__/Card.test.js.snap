@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should return a card display the correct reservation information 1`] = `
+<article
+  className="card"
+>
+  <h3>
+      
+     
+  </h3>
+  <h4>
+     
+      
+  </h4>
+  <h4>
+     
+     
+  </h4>
+  <h4>
+     
+     
+  </h4>
+  <button
+    className="cancel-btn"
+  >
+     Cancel 
+  </button>
+</article>
+`;
