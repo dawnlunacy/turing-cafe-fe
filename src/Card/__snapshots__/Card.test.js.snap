@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card should return a card display the correct reservation informatino 1`] = `
+exports[`Card should return a card display the correct reservation information 1`] = `
 <article
   className="card"
 >
