@@ -8,7 +8,7 @@ class Form extends Component {
                 name: "",
                 date: "",
                 time: "",
-                number: 0
+                number: null
             }
     }
 
@@ -22,11 +22,29 @@ class Form extends Component {
             <form className="input-form">
                 <input
                     name="name"
-                    placeholder="ENTER NAME"
+                    placeholder="NAME"
                     value={this.state.name}
                     onChange={event => this.handleChange(event)} 
                     />
-
+                <input
+                    name="date"
+                    placeholder="Date (mm/dd)"
+                    value={this.state.date}
+                    onChange={event => this.handleChange(event)} 
+                    />
+                <input
+                    name="time"
+                    placeholder="TIME"
+                    value={this.state.time}
+                    onChange={event => this.handleChange(event)} 
+                    />
+                <input
+                    name="number"
+                    type="number"
+                    placeholder="Number of guests"
+                    value={this.state.number}
+                    onChange={event => this.handleChange(event)} 
+                    />
             </form>
         )
     }
