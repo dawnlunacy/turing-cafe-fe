@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-    constructor() {
+    constructor(props) {
+        console.log("INFORMPROPS", props)
         super()
             this.state = {
                 id: 123,
                 name: "",
                 date: "",
                 time: "",
-                number: null
+                number: ""
             }
     }
 
     handleChange = event => {
         this.setState({[event.target.name]: event.target.value})
+    }
+
+    submitNewReservation = event => {
+        console.log("EVENTuponSubmit", event)
+        event.preventDefault()
+        const newRes = {...this.state};
+        this.props.handleSubmit(newRes)
     }
 
     render() {
@@ -45,6 +53,7 @@ class Form extends Component {
                     value={this.state.number}
                     onChange={event => this.handleChange(event)} 
                     />
+                <button onClick = {event => this.submitNewReservation(event)}> Make Reservation </button>
             </form>
         )
     }
