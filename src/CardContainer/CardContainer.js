@@ -5,7 +5,6 @@ import './CardContainer.css';
 
 
 const CardContainer = (props) => {
-    console.log("Props", props)
     const reservations = props.reservations.map(reservation => {
             return ( <Card 
                 key = { reservation.id }
