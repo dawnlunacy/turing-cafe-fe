@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import './Form.css'
 
 class Form extends Component {
     constructor(props) {
-        console.log("INFORMPROPS", props)
         super()
             this.state = {
                 id: 123,
@@ -18,14 +18,22 @@ class Form extends Component {
     }
 
     submitNewReservation = event => {
-        console.log("EVENTuponSubmit", event)
         event.preventDefault()
-        const newRes = {...this.state};
-        this.props.handleSubmit(newRes)
+        this.props.handleSubmit(this.state)
+        this.clearInputs()
+
     }
 
+    clearInputs = () => {
+        this.setState({ 
+            id: 123,
+            name: "",
+            date: "",
+            time: "",
+            number: ""
+        })
+    }
     render() {
-        console.log("FormState", this.state)
         return(
             <form className="input-form">
                 <input
@@ -53,7 +61,7 @@ class Form extends Component {
                     value={this.state.number}
                     onChange={event => this.handleChange(event)} 
                     />
-                <button onClick = {event => this.submitNewReservation(event)}> Make Reservation </button>
+                <button className="form-btn" onClick = {event => this.submitNewReservation(event)}> Make Reservation </button>
             </form>
         )
     }

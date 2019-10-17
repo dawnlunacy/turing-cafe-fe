@@ -1,0 +1,16 @@
+.form-btn {
+    background-color: #008080;
+    color: white;
+    font-size: 1em;
+    height: 35px;
+    margin: 10px;
+    width: 200px;
+}
+
+input {
+    font-size: 1em;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+}
