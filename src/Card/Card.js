@@ -1,13 +1,13 @@
 import React from 'react';
 import './Card.css'
 
-const Card = () => {
+const Card = (res) => {
     return (
         <article className="card">
-            <h3>  name </h3>
-            <h4> Date </h4>
-            <h4> time </h4>
-            <h4> # of guests </h4>
+            <h3>  { res.name } </h3>
+            <h4> { res.date}  </h4>
+            <h4> { res.time } </h4>
+            <h4> { res.number } </h4>
             <button className="cancel-btn"> Cancel </button>
         </article>
     )
